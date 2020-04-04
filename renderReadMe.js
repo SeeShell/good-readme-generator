@@ -75,8 +75,8 @@ ${badge}
 `;
 }
 
+// Github API accessed to get data from the user's profile
 RenderReadMe.prototype.getGitHubInfo = function(username) {
-    //  console.log(username);
       const queryUrl = `https://api.github.com/users/${username}`;
       return axios.get(queryUrl).then((response) => response.data);
     }

@@ -9,7 +9,7 @@ const appendFile = util.promisify(fs.appendFile);
 
 
 // The page initializes with a command line prompt using inquirer,
-// fetches data and writes and appends the readme.md in output folder
+// fetches data and writes and appends the readme.md into an output folder
 init();
 
 function init() {
