@@ -1,7 +1,6 @@
 const fs = require("fs");
 const util = require("util");
 
-const axios = require("axios");
 const inquirer = require("inquirer");
 const RenderReadMe = require("./renderReadMe");
 const render = new RenderReadMe();
@@ -9,7 +8,8 @@ const writeFile = util.promisify(fs.writeFile);
 const appendFile = util.promisify(fs.appendFile);
 
 
-// prompt user with inquirer
+// The page initializes with a command line prompt using inquirer,
+// fetches data and writes and appends the readme.md in output folder
 init();
 
 function init() {
@@ -19,7 +19,7 @@ function init() {
     writeFile("output/readme.md", markdownAns)
     return answers;
     })
-    .then(answers => getGitHubInfo(answers.username))
+    .then(answers => render.getGitHubInfo(answers.username))
     
     .then(userData => {
         const markdownAvatar = render.renderAvatar(userData)
@@ -69,7 +69,7 @@ function promptUser() {
         type: "list",
         name: "license",
         message: "Do you have a license?",
-        choices: [ "MIT", "Artistic 2.0"]
+        choices: [ "MIT", "Artistic 2.0", "Mozilla", "None"]
       },
       {
         type: "input",
@@ -89,12 +89,8 @@ function promptUser() {
 
 ]);
 }
-// then use github api to get user email and profile pic
 
-function getGitHubInfo(username) {
-//  console.log(username);
-  const queryUrl = `https://api.github.com/users/${username}`;
-  return axios.get(queryUrl).then((response) => response.data);
-}
+
+
 
 

@@ -1,6 +1,6 @@
-## awesome project
+## q
 
-an app that does cool stuff
+q
 
 ## Table of Contents
 * [Installation](#installation)
@@ -14,31 +14,31 @@ an app that does cool stuff
 
 ## Installation
 
-run it!
+q
 
 ## Usage
 
-enjoy!
+q
 
 ## Credits
 
-n/a
+q
 
 ## Contributing
 
-n/a
+q
 
 ## Tests
 
-n/a
+q
 
 ## Questions
 
-n/a
+q
 
 ## License
 
-[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+
 
 
 ## Author
