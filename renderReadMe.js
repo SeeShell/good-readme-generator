@@ -73,12 +73,5 @@ ${badge}
 
 }
 
-// function getGitHubData(username) {
-//     const queryUrl = `https://api.github.com/users/${username}`;
-    
-//     axios.get(queryUrl).then((response) => {
-//         const userData = response.data;
-//         return userData;
-//     })
-//   }
+
 module.exports = RenderReadMe;

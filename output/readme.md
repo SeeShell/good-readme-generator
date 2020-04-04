@@ -1,6 +1,6 @@
-## README generator
+## awesome project
 
-This is a command line app that speeds up the process for making a good readme.md by asking the user a few questions and filling the answers into a good markdown template. The readme.md is saved in an output folder.
+an app that does cool stuff
 
 ## Table of Contents
 * [Installation](#installation)
@@ -14,27 +14,27 @@ This is a command line app that speeds up the process for making a good readme.m
 
 ## Installation
 
-run the code `node index.js` in your command line to get the question prompts
+run it!
 
 ## Usage
 
-run the code `node index.js` in your command line to get the question prompts
+enjoy!
 
 ## Credits
 
-
+n/a
 
 ## Contributing
 
-
+n/a
 
 ## Tests
 
-
+n/a
 
 ## Questions
 
-
+n/a
 
 ## License
 

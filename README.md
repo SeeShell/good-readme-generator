@@ -14,11 +14,12 @@ This is a command line app that speeds up the process for making a good readme.m
 
 ## Installation
 
-run the code `node index.js` in your command line to get the question prompts
+Run the code `node index.js` in your command line to get the question prompts. See the gifs below for an example of how it works:
+
+![](readme-part1.gif)
+![](readme-part2.gif)
 
 ## Usage
-
-run the code `node index.js` in your command line to get the question prompts
 
 ## Credits
 

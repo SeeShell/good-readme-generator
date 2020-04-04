@@ -97,10 +97,4 @@ function getGitHubInfo(username) {
   return axios.get(queryUrl).then((response) => response.data);
 }
 
-// then prompt user with questions about the project
 
-// then print the answers to the console
-
-// write a template literal for the readme including the user answers
-
-// write the file to a md
