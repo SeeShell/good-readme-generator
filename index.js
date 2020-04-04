@@ -47,6 +47,11 @@ function promptUser() {
       },
       {
         type: "input",
+        name: "description",
+        message: "Please enter a description for your project:",
+      },
+      {
+        type: "input",
         name: "installation",
         message: "Please enter installation instructions:",
       },
@@ -64,7 +69,7 @@ function promptUser() {
         type: "list",
         name: "license",
         message: "Do you have a license?",
-        choices: [ "MIT", "other"]
+        choices: [ "MIT", "Artistic 2.0"]
       },
       {
         type: "input",

@@ -21,14 +21,22 @@ Email: ${email}
 }
 RenderReadMe.prototype.renderProject = function(answers){
     // getGitHubData(answers.username)
+    if (answers.license === "Artistic 2.0"){
+        badge = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)"
+    }else if (answers.license === "MIT"){
+        badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    }
     return `## ${answers.title}
 
-description
+${answers.description}
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
 
@@ -56,11 +64,11 @@ ${answers.tests}
 
 ${answers.questions}
 
+## License
+
+${badge}
+
 `;
-
-
-    // getGitHubData(answers.username)
-    // .then(userData => renderAvatar(userData))
         
 
 }

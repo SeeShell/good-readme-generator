@@ -1,37 +1,44 @@
-## g
+## d
 
-description
+d
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
 
 ## Installation
 
-g
+d
 
 ## Usage
 
-g
+d
 
 ## Credits
 
-g
+d
 
 ## Contributing
 
-g
+d
 
 ## Tests
 
-g
+d
 
 ## Questions
 
-g
+d
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Author
