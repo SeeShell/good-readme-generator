@@ -3,11 +3,18 @@ const RenderReadMe = function (){};
 
 RenderReadMe.prototype.renderAvatar = function(userData){
     // console.log(userData);
-    const { avatar_url, login } = userData;
+    const { avatar_url, login, email } = userData;
     // const avatarImage = `![${login}](${avatar_url})`
      
-    console.log(`avatar: ${avatar_url} 
-    login: ${login}`);
+    const markdownAvatar = `
+## Author
+
+![${login}](${avatar_url})
+
+Email: ${email}
+    
+    `
+    return markdownAvatar;
 
 
     // return writeFile("output/readme.md", readme);
@@ -16,40 +23,40 @@ RenderReadMe.prototype.renderProject = function(answers){
     // getGitHubData(answers.username)
     return `## ${answers.title}
 
-    description
-    
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
-    
-    
-    ## Installation
-    
-    ${answers.installation}
+description
 
-    ## Usage
-    
-    ${answers.usage}
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
-    ## Credits
-    
-    ${answers.credits}
 
-    ## Contributing
-    
-    ${answers.contributing}
+## Installation
 
-    ## Tests
+${answers.installation}
 
-    ${answers.tests}
+## Usage
 
-    ## Questions
-    
-    ${answers.questions}
+${answers.usage}
 
-    ## Author`;
+## Credits
+
+${answers.credits}
+
+## Contributing
+
+${answers.contributing}
+
+## Tests
+
+${answers.tests}
+
+## Questions
+
+${answers.questions}
+
+`;
 
 
     // getGitHubData(answers.username)

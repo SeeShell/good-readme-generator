@@ -6,6 +6,8 @@ const inquirer = require("inquirer");
 const RenderReadMe = require("./renderReadMe");
 const render = new RenderReadMe();
 const writeFile = util.promisify(fs.writeFile);
+const appendFile = util.promisify(fs.appendFile);
+
 
 // prompt user with inquirer
 init();
@@ -13,16 +15,17 @@ init();
 function init() {
   promptUser()
     .then(answers => {
-    const markdown = render.renderProject(answers)  
-    return markdown, answers;
+    const markdownAns = render.renderProject(answers)  
+    writeFile("output/readme.md", markdownAns)
+    return answers;
     })
-    .then(answers => getGitHubData(answers.username))
+    .then(answers => getGitHubInfo(answers.username))
     
-    .then(userData => render.renderAvatar(userData))
-    //   console.log(typeof userData)
-    //   render.renderAvatar(userData);
-    // })
-    // .then(() => console.log("You have successfully created a readme!"))
+    .then(userData => {
+        const markdownAvatar = render.renderAvatar(userData)
+        return appendFile("output/readme.md", markdownAvatar)
+    })
+    .then(() => console.log("You have successfully created a readme!"))
     .catch((error) => {
       console.log(error);
       console.log("Could not create file.");
@@ -83,10 +86,9 @@ function promptUser() {
 }
 // then use github api to get user email and profile pic
 
-function getGitHubData(username) {
+function getGitHubInfo(username) {
 //  console.log(username);
   const queryUrl = `https://api.github.com/users/${username}`;
-  
   return axios.get(queryUrl).then((response) => response.data);
 }
 
