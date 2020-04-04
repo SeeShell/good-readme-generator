@@ -1,7 +1,7 @@
 const RenderReadMe = function (){};
 
 
-const renderAvatar = function(userData){
+RenderReadMe.prototype.renderAvatar = function(userData){
     // console.log(userData);
     const { avatar_url, login } = userData;
     // const avatarImage = `![${login}](${avatar_url})`
@@ -12,8 +12,8 @@ const renderAvatar = function(userData){
 
     // return writeFile("output/readme.md", readme);
 }
-const renderProject = function(answers){
-    
+RenderReadMe.prototype.renderProject = function(answers){
+    // getGitHubData(answers.username)
     return `## ${answers.title}
 
     description
@@ -51,16 +51,19 @@ const renderProject = function(answers){
 
     ## Author`;
 
-    
+
     // getGitHubData(answers.username)
     // .then(userData => renderAvatar(userData))
         
 
 }
 
-function getGitHubData(username) {
-    const queryUrl = `https://api.github.com/users/${username}`;
+// function getGitHubData(username) {
+//     const queryUrl = `https://api.github.com/users/${username}`;
     
-    return axios.get(queryUrl).then((response) => response.data);
-  }
-module.exports = renderProject;
+//     axios.get(queryUrl).then((response) => {
+//         const userData = response.data;
+//         return userData;
+//     })
+//   }
+module.exports = RenderReadMe;

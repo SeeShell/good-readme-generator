@@ -3,8 +3,8 @@ const util = require("util");
 
 const axios = require("axios");
 const inquirer = require("inquirer");
-const renderProject = require("./renderReadMe");
-// const render = new RenderReadMe();
+const RenderReadMe = require("./renderReadMe");
+const render = new RenderReadMe();
 const writeFile = util.promisify(fs.writeFile);
 
 // prompt user with inquirer
@@ -13,13 +13,12 @@ init();
 function init() {
   promptUser()
     .then(answers => {
-    const markdown = renderProject(answers)  
-    return writeFile("output/readme.md", markdown);
+    const markdown = render.renderProject(answers)  
+    return markdown, answers;
     })
-    // getGitHubData(answers.username)
+    .then(answers => getGitHubData(answers.username))
     
-    // .then(userData => {
-    //   console.log(userData);
+    .then(userData => render.renderAvatar(userData))
     //   console.log(typeof userData)
     //   render.renderAvatar(userData);
     // })
@@ -28,7 +27,7 @@ function init() {
       console.log(error);
       console.log("Could not create file.");
       process.exit(1);
-    });
+    })
 }
 
 function promptUser() {
