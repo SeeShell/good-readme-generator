@@ -1,6 +1,6 @@
-## d
+## README generator
 
-d
+This is a command line app that speeds up the process for making a good readme.md by asking the user a few questions and filling the answers into a good markdown template. The readme.md is saved in an output folder.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -14,31 +14,31 @@ d
 
 ## Installation
 
-d
+run the code `node index.js` in your command line to get the question prompts
 
 ## Usage
 
-d
+run the code `node index.js` in your command line to get the question prompts
 
 ## Credits
 
-d
+
 
 ## Contributing
 
-d
+
 
 ## Tests
 
-d
+
 
 ## Questions
 
-d
+
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
 
 
 ## Author
